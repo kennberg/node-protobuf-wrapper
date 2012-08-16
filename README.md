@@ -13,6 +13,26 @@ Installation inside your server directory:
     cd node-protobuf-wrapper
     npm install
 
+Suppose you have this sample proto:
+
+    message Impression {
+      enum ImpressionType {
+        FIRST = 0;
+        SECOND = 1;
+      }
+
+      optional ImpressionType type = 1;
+    }
+
+    message Setting {
+      enum SettingType {
+        SAMPLE_SETTING = 0;
+      }
+
+      optional SettingType type = 1;
+      optional string value = 2;
+    }
+
 In your JavaScript you can do something like this:
 
     var enums = [ 
